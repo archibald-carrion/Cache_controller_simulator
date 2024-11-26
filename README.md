@@ -30,3 +30,4 @@ This Cache Memory Simulator is an implementation of a cache memory system with L
 - [ ] implement own equivalent of constants.py
 - [ ] implement system that can use multiple replacement policies
 - [ ] implement system that can use multiple cores to simulate multi-core systems
+- [ ] Implement cool visualizations of the cache memory system
