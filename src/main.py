@@ -1,5 +1,6 @@
 from constants import Units, MEM_DATA
-from dev_util import (Memory, value_to_tuple_le, tuple_to_value_le)
+from dev_util import (value_to_tuple_le, tuple_to_value_le)
+import memory
 import random
 import logging
 from datetime import datetime
