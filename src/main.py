@@ -1,6 +1,6 @@
 from constants import Units, MEM_DATA
-from dev_util import (value_to_tuple_le, tuple_to_value_le)
-import memory
+from util import value_to_tuple_le, tuple_to_value_le
+from memory import Memory
 import random
 import logging
 from datetime import datetime
@@ -153,13 +153,13 @@ class CacheController:
             self.cache_hits += 1
             cache_block = self.address_mapping[block_addr]
             self.update_frequency(cache_block)
-            logger.log(f"\n✅ Cache hit")
+            logger.log(f"\n [OK] Cache hit")
             logger.log(f"Found data in cache block {cache_block}")
             self.print_cache_state()
             return self.cache_data[cache_block]
 
         self.cache_misses += 1
-        logger.log(f"\n❌ Cache miss")
+        logger.log(f"\n[NOT OK] Cache miss")
         logger.log(f"Block {block_addr} not found in cache")
         data = self.memory.read(addr, byte_len)
         logger.log(f"Read data from memory: 0x{data:X}")
